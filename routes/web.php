@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/cms', 'cms\TopController@index')->middleware('auth');
+Route::get('/cms/player', 'cms\PlayerInfoController@index')->middleware('auth');
