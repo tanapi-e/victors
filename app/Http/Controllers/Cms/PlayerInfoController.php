@@ -19,6 +19,13 @@ class PlayerInfoController extends Controller
 
     public function index()
     {
-        return view('cms.playerInfo');
+        // プルダウンメニュー用に設定
+        $positions = config('const.position');
+        $management_position = config('const.management_position');
+
+        return view('cms.playerInfo', [
+            'positions' => $positions,
+            'management_position' => $management_position
+        ]);
     }
 }
