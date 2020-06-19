@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/cms', 'cms\TopController@index')->middleware('auth');
 Route::get('/cms/player', 'cms\PlayerInfoController@index')->middleware('auth');
+Route::post('/cms/player/confirm', 'cms\PlayerInfoController@create');

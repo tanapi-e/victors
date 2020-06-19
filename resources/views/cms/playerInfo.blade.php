@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1>選手情報登録</h1>
-    <form action="" method="post" class="form-horizontal">
+    <form action="/cms/player/confirm" method="post" class="form-horizontal">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
             <label class="col-sm-2 control-label" for="name">名前</label>
@@ -26,7 +26,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label" for="position">ポジション</label>
             <div class="col-sm-2">
-                <select name="position" id="position">
+                <select name="position" id="position" class="select">
                     @foreach($positions as $key => $value)
                         <option value="{{ $key }}">{{ $value }}</option>
                     @endforeach
@@ -36,7 +36,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label" for="age">役職</label>
             <div class="col-sm-2">
-                <select name="management_position" id="management_position">
+                <select name="management_position" id="management_position" class="select">
                     @foreach($management_position as $key => $value)
                         <option value="{{ $key }}">{{ $value }}</option>
                     @endforeach
