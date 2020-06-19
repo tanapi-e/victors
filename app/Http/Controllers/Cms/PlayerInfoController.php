@@ -28,9 +28,4 @@ class PlayerInfoController extends Controller
             'management_position' => $management_position
         ]);
     }
-
-    public function create(Request $request)
-    {
-        return view('cms.confirmPlayersInfo');
-    }
 }
