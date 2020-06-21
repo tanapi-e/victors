@@ -9,12 +9,18 @@
             <label class="col-sm-2 control-label" for="name">名前</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="name" name="name" placeholder="名前を入力してください" value="{{ old('name') }}">
+                @if($errors->has('name'))
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                @endif
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label" for="age">年齢</label>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="age" name="age" placeholder="年齢" value="{{ old('age') }}">
+                @if($errors->has('age'))
+                    <span class="text-danger">{{ $errors->first('age') }}</span>
+                @endif
             </div>
         </div>
         <div class="form-group">
