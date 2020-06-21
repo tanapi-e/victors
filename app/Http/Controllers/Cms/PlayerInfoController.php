@@ -4,6 +4,7 @@ namespace App\Http\Controllers\cms;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\CreatePlayerRequest;
 
 class PlayerInfoController extends Controller
 {
@@ -29,7 +30,7 @@ class PlayerInfoController extends Controller
         ]);
     }
 
-    public function create(Request $request)
+    public function create(CreatePlayerRequest $request)
     {
         return view('cms.confirmPlayersInfo');
     }
