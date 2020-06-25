@@ -34,7 +34,7 @@
             <div class="col-sm-2">
                 <select name="position" id="position" class="select">
                     @foreach($positions as $key => $value)
-                        <option value="{{ $key }}">{{ $value }}</option>
+                        <option value="{{ $value }}">{{ $value }}</option>
                     @endforeach
                 </select>
             </div>
@@ -44,7 +44,7 @@
             <div class="col-sm-2">
                 <select name="management_position" id="management_position" class="select">
                     @foreach($management_position as $key => $value)
-                        <option value="{{ $key }}">{{ $value }}</option>
+                        <option value="{{ $value }}">{{ $value }}</option>
                     @endforeach
                 </select>
             </div>
