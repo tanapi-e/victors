@@ -19,6 +19,11 @@ class PlayerInfoController extends Controller
         $this->middleware('auth');
     }
 
+    /**
+     * 選手情報登録画面表示
+     *
+     * @return view
+     */
     public function index()
     {
         // プルダウンメニュー用に設定
@@ -31,18 +36,43 @@ class PlayerInfoController extends Controller
         ]);
     }
 
-    public function create(CreatePlayerRequest $request, Players $post)
+    /**
+     * 選手情報登録完了画面表示(DB登録)
+     *
+     * @param CreatePlayerRequest $name
+     * @param Players $players
+     *
+     * @return view
+     */
+    public function create(CreatePlayerRequest $request, Players $players)
     {
-        $postData = [
+        // validate通過したデータを配列に格納
+        $posts = [
             'name' => $request->input('name'),
             'position' => $request->input('position'),
             'management_position' => $request->input('management_position'),
             'uniform_number' => $request->input('uniform_number'),
             'age' => $request->input('age'),
         ];
-var_dump($postData);
-        $create = $post->postPlayers($postData);
+
+        // 配列に格納したデータをDBへ登録
+        $create = $players->postPlayers($posts);
 
         return view('cms.player.confirmPlayersInfo');
+    }
+
+    /**
+     * 選手情報登録完了画面表示(DB登録)
+     *
+     * @param Players $players
+     *
+     * @return view
+     */
+    public function getPlayerList(Players $players)
+    {
+        // 選手情報全件取得
+        $playerList = $players->getAllPlayerList();
+
+        return view('cms.player.listPlayersInfo')->with('playerList', $playerList);
     }
 }

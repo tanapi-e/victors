@@ -24,4 +24,5 @@ Route::get('/cms/player', 'cms\PlayerInfoController@index')->middleware('auth');
 
 Route::group(['middleware' => ['web']], function () {
     Route::post('/cms/player/confirm', 'cms\PlayerInfoController@create');
+    Route::get('/cms/player/list', 'cms\PlayerInfoController@getPlayerList');
 });
