@@ -7,7 +7,13 @@
             <div class="card pdBtm10">
                 <div class="card-header">Game</div>
                 <div class="card-body">
-                    <a href="/cms/game">試合情報登録</a>
+                    <a href="/cms/game/result">試合結果登録</a>
+                </div>
+            </div>
+            <div class="card pdBtm10">
+                <div class="card-header">Game</div>
+                <div class="card-body">
+                    <a href="/cms/game/schedule">試合予定登録</a>
                 </div>
             </div>
             <div class="card">
