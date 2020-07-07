@@ -4,7 +4,7 @@ namespace App\Http\Controllers\cms;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\CreateFormRequest;
+use App\Http\Requests\PlayersFormRequest;
 use App\Players;
 
 class PlayerInfoController extends Controller
@@ -39,12 +39,12 @@ class PlayerInfoController extends Controller
     /**
      * 選手情報登録完了画面表示(DB登録)
      *
-     * @param CreateFormRequest $name
+     * @param PlayersFormRequest $request
      * @param Players $players
      *
      * @return view
      */
-    public function create(CreateFormRequest $request, Players $players)
+    public function create(PlayersFormRequest $request, Players $players)
     {
         // validate通過したデータを配列に格納
         $posts = [

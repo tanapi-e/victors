@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateFormRequest extends FormRequest
+class GamesFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,18 +24,17 @@ class CreateFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:20',
-            'age' => 'required|integer'
+            'opponent_team' => 'required|max:30',
+            'match_day' => 'required'
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required' => '名前を入力してください。',
-            'name.max' => '20文字以下で入力して下さい。',
-            'age.required'  => '年齢を入力して下さい。',
-            'age.integer' => '数字で入力して下さい。'
+            'opponent_team.required' => 'チーム名を入力してください。',
+            'opponent_team.max' => '30文字以下で入力して下さい。',
+            'match_day.required'  => '日にちを入力して下さい。'
         ];
     }
 }
