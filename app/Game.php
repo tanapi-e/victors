@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Game extends Model
 {
@@ -22,4 +23,17 @@ class Game extends Model
         return Game::create($postData);
     }
 
+    /**
+     * 選手情報一覧取得処理
+     *
+     * @return Game
+     */
+    public function getGameList()
+    {
+        // 現在日付設定
+        $today = Carbon::today();
+
+        // 現在日付より前の試合を取得し返す
+        return Game::where('match_day', '>', $today)->orderBy('match_day', 'asc')->get();
+    }
 }

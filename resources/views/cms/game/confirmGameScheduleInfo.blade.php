@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10 text-center">
-            <a href="/cms/player/list" class="btn btn-primary btn-wide">試合情報一覧へ戻る</a>
+            <a href="/cms/game/schedule/list" class="btn btn-primary btn-wide">試合情報一覧へ戻る</a>
         </div>
     </div>
 </div>

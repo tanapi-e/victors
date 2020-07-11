@@ -24,10 +24,13 @@ Route::get('/cms/player', 'cms\PlayerInfoController@index')->middleware('auth');
 Route::get('/cms/game/schedule', 'cms\GameScheduleInfoController@index')->middleware('auth');
 
 Route::group(['middleware' => ['web']], function () {
-    // 選手情報(管理画面)
+    // 選手情報登録(管理画面)
     Route::post('/cms/player/confirm', 'cms\PlayerInfoController@create');
+    // 選手情報一覧表示(管理画面)
     Route::get('/cms/player/list', 'cms\PlayerInfoController@getPlayerList');
 
-    // 試合情報登録(管理画面)
+    // 試合予定登録(管理画面)
     Route::post('/cms/game/schedule/confirm', 'cms\GameScheduleInfoController@create');
+    // 試合予定一覧取得(管理画面)
+    Route::get('/cms/game/schedule/list', 'cms\GameScheduleInfoController@getGameSchedule');
 });
