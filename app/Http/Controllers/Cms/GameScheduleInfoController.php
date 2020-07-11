@@ -50,4 +50,19 @@ class GameScheduleInfoController extends Controller
 
         return view('cms.game.confirmGameScheduleInfo');
     }
+
+    /**
+     * 試合予定一覧画面表示
+     *
+     * @param Game $games
+     *
+     * @return view
+     */
+    public function getGameSchedule(Game $games)
+    {
+        // 試合予定一覧取得
+        $gameList = $games->getGameList();
+
+        return view('cms.game.listGameScheduleInfo')->with('gameList', $gameList);
+    }
 }
