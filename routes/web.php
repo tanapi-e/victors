@@ -33,4 +33,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/cms/game/schedule/confirm', 'cms\GameScheduleInfoController@create');
     // 試合予定一覧取得(管理画面)
     Route::get('/cms/game/schedule/list', 'cms\GameScheduleInfoController@getGameSchedule');
+    // 試合予定削除(管理画面)
+    Route::post('/cms/game/schedule/delete/{id}', 'cms\GameScheduleInfoController@delete');
 });
