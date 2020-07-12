@@ -26,7 +26,7 @@ class GameScheduleInfoController extends Controller
      */
     public function index()
     {
-        return view('cms.game.gameScheduleInfo');
+        return view('cms.game.schedule.gameScheduleInfo');
     }
 
     /**
@@ -48,7 +48,7 @@ class GameScheduleInfoController extends Controller
         // 試合情報登録
         $create = $games->postGames($posts);
 
-        return view('cms.game.confirmGameScheduleInfo');
+        return view('cms.game.schedule.confirmGameScheduleInfo');
     }
 
     /**
@@ -63,7 +63,7 @@ class GameScheduleInfoController extends Controller
         // 試合予定一覧取得
         $gameList = $games->getGameList();
 
-        return view('cms.game.listGameScheduleInfo')->with('gameList', $gameList);
+        return view('cms.game.schedule.listGameScheduleInfo')->with('gameList', $gameList);
     }
 
     /**
