@@ -25,6 +25,11 @@
             @endforeach
         </tbody>
     </table>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10 text-center">
+            <a href="/cms/game/schedule/" class="btn btn-primary btn-wide">試合予定を登録する</a>
+        </div>
+    </div>
 </div>
 @endsection
 
