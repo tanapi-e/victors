@@ -28,6 +28,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/cms/player/confirm', 'cms\PlayerInfoController@create');
     // 選手情報一覧表示(管理画面)
     Route::get('/cms/player/list', 'cms\PlayerInfoController@getPlayerList');
+    // 選手情報削除(管理画面)
+    Route::post('/cms/player/delete/{id}', 'cms\PlayerInfoController@delete');
 
     // 試合予定登録(管理画面)
     Route::post('/cms/game/schedule/confirm', 'cms\GameScheduleInfoController@create');

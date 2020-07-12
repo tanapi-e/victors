@@ -75,4 +75,22 @@ class PlayerInfoController extends Controller
 
         return view('cms.player.listPlayersInfo')->with('playerList', $playerList);
     }
+
+    /**
+     * 選手情報削除
+     *
+     * @param int $id
+     *
+     * @return view
+     */
+    public function delete(int $id)
+    {
+        // 削除対象選手抽出
+        $deletePlayer = Players::find($id);
+
+        // 削除処理実行
+        $deletePlayer->delete();
+
+        return redirect()->to('/cms/player/list');
+    }
 }
