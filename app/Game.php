@@ -24,7 +24,7 @@ class Game extends Model
     }
 
     /**
-     * 選手情報一覧取得処理
+     * 試合情報一覧取得処理
      *
      * @return Game
      */

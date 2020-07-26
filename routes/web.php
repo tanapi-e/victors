@@ -23,6 +23,7 @@ Route::get('/cms', 'cms\TopController@index')->middleware('auth');
 Route::get('/cms/player', 'cms\PlayerInfoController@index')->middleware('auth');
 Route::get('/cms/game/schedule', 'cms\GameScheduleInfoController@index')->middleware('auth');
 Route::get('/cms/game/result', 'cms\GameResultInfoController@index')->middleware('auth');
+Route::get('/cms/blog', 'cms\BlogController@index')->middleware('auth');
 
 Route::group(['middleware' => ['web']], function () {
     // 選手情報登録(管理画面)
