@@ -44,6 +44,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/cms/game/result/confirm', 'cms\GameResultInfoController@update');
     // 試合結果登録画面表示(管理画面)
     Route::get('/cms/game/result/update/{id}', 'cms\GameResultInfoController@edit_index');
+    // 試合結果削除(管理画面)
+    Route::post('/cms/game/result/delete/{id}', 'cms\GameResultInfoController@delete');
 
     // ブログ投稿画面表示(管理画面)
     Route::get('/cms/blog/create', 'cms\BlogController@create_index');

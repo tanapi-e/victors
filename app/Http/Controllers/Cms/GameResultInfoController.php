@@ -76,4 +76,22 @@ class GameResultInfoController extends Controller
 
         return view('cms.game.result.confirmGameResultInfo');
     }
+
+    /**
+     * 試合結果削除処理
+     *
+     * @param int $id
+     *
+     * @return view
+     */
+    public function delete(int $id)
+    {
+        // 削除対象の試合を抽出
+        $deleteGame = Game::find($id);
+
+        // 削除処理実行
+        $deleteGame->delete();
+
+        return redirect()->to('/cms/game/result');
+    }
 }
