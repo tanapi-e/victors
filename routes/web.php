@@ -40,5 +40,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/cms/game/schedule/delete/{id}', 'cms\GameScheduleInfoController@delete');
 
     // 試合結果登録(管理画面)
-    Route::post('/cms/game/result/confirm', 'cms\GameScheduleInfoController@create');
+    Route::post('/cms/game/result/confirm', 'cms\GameResultInfoController@update');
+    // 試合結果登録画面表示(管理画面)
+    Route::get('/cms/game/result/update/{id}', 'cms\GameResultInfoController@edit_index');
 });

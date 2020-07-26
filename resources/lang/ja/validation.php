@@ -39,7 +39,7 @@ return [
     'exists'               => '選択された:attributeは正しくありません。',
     'image'                => ':attributeは画像にしてください。',
     'in'                   => '選択された:attributeは正しくありません。',
-    'integer'              => ':attributeは整数にしてください。',
+    'integer'              => '半角数字で入力してください。',
     'ip'                   => ':attributeを正しいIPアドレスにしてください。',
     'max'                  => [
         'numeric' => ':attributeは:max以下にしてください。',
@@ -57,7 +57,7 @@ return [
     'not_in'               => '選択された:attributeは正しくありません。',
     'numeric'              => ':attributeは数字にしてください。',
     'regex'                => ':attributeの書式が正しくありません。',
-    'required'             => ':attributeは必須です。',
+    'required'             => '入力して下さい。',
     'required_if'          => ':otherが:valueの時、:attributeは必須です。',
     'required_with'        => ':valuesが存在する時、:attributeは必須です。',
     'required_with_all'    => ':valuesが存在する時、:attributeは必須です。',

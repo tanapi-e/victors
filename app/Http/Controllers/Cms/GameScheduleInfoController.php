@@ -61,7 +61,7 @@ class GameScheduleInfoController extends Controller
     public function getGameSchedule(Game $games)
     {
         // 試合予定一覧取得
-        $gameList = $games->getGameList();
+        $gameList = $games->getGameList('>');
 
         return view('cms.game.schedule.listGameScheduleInfo')->with('gameList', $gameList);
     }
