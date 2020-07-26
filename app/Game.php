@@ -28,12 +28,12 @@ class Game extends Model
      *
      * @return Game
      */
-    public function getGameList()
+    public function getGameList(string $comparisonOperator)
     {
         // 現在日付設定
         $today = Carbon::today();
 
         // 現在日付より前の試合を取得し返す
-        return Game::where('match_day', '>', $today)->orderBy('match_day', 'asc')->get();
+        return Game::where('match_day', $comparisonOperator, $today)->orderBy('match_day', 'asc')->get();
     }
 }
