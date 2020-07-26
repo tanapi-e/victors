@@ -25,7 +25,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10 text-center">
-                <input type="submit" name="button" value="登録する" class="btn btn-primary btn-wide" />
+                <input type="submit" name="button" value="投稿する" class="btn btn-primary btn-wide" />
             </div>
         </div>
     </form>

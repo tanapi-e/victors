@@ -49,4 +49,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/cms/blog/create', 'cms\BlogController@create_index');
     // ブログ投稿(管理画面)
     Route::post('/cms/blog/confirm', 'cms\BlogController@create');
+    // ブログ投稿内容削除(管理画面)
+    Route::post('/cms/blog/delete/{id}', 'cms\BlogController@delete');
 });
