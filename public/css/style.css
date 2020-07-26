@@ -13,3 +13,10 @@
 .mgbt30 {
     margin-bottom: 30px !important;
 }
+
+@media screen and (min-width: 960px) {
+    /* 960px以上に適用されるCSS（PC用） */
+    .textArea {
+        width: 500px;
+    }
+}
