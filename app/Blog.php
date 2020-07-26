@@ -11,7 +11,7 @@ class Blog extends Model
     ];
 
     /**
-     * 試合情報一覧取得処理
+     * ブログ投稿一覧取得処理
      *
      * @return Blog
      */
@@ -19,5 +19,17 @@ class Blog extends Model
     {
         // 降順で返す
         return Blog::orderBy('created_at', 'desc')->get();
+    }
+
+    /**
+     * ブログ投稿登録処理
+     *
+     * @param array $postData
+     *
+     * @return Blog
+     */
+    public function createBlogs(array $postData)
+    {
+        return Blog::create($postData);
     }
 }

@@ -34,7 +34,7 @@
     </table>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10 text-center">
-            <a href="/cms/blog/" class="btn btn-primary btn-wide">ブログを投稿する</a>
+            <a href="/cms/blog/create" class="btn btn-primary btn-wide">ブログを投稿する</a>
         </div>
     </div>
     <!-- フラッシュメッセージ -->
