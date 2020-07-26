@@ -9,7 +9,6 @@
                 <th scope="col">タイトル</th>
                 <th scope="col">内容</th>
                 <th scope="col">作成日</th>
-                <th scope="col">編集</th>
                 <th scope="col">削除</th>
             </tr>
         </thead>
@@ -17,11 +16,8 @@
             @foreach ($blogList as $blog)
                 <tr>
                     <td>{{ $blog->title }}</td>
-                    <td>{{ $blog->content }}</td>
+                    <td>{{ Str::limit($blog->content, 20, '(...)') }}</td>
                     <td>{{ $blog->created_at }}</td>
-                    <td>
-                        <a href="/cms/blog/update/{{ $blog->id }}" class="btn btn-primary btn-sm">編集</a>
-                    </td>
                     <td>
                         <form action="/cms/blog/delete/{{ $blog->id }}" method="post">
                             {{ csrf_field() }}

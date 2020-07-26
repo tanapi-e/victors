@@ -56,4 +56,22 @@ class BlogController extends Controller
 
         return view('cms.blog.confirmBlog');
     }
+
+    /**
+     * 投稿削除処理
+     *
+     * @param int $id
+     *
+     * @return view
+     */
+    public function delete(int $id)
+    {
+        // 削除対象の試合を抽出
+        $deleteBlog = Blog::find($id);
+
+        // 削除処理実行
+        $deleteBlog->delete();
+
+        return redirect()->to('/cms/blog');
+    }
 }

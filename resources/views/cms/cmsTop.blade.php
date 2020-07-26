@@ -16,10 +16,16 @@
                     <a href="/cms/game/schedule">試合予定登録</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card pdBtm10">
                 <div class="card-header">Player</div>
                 <div class="card-body">
                     <a href="/cms/player">選手情報登録</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Blog</div>
+                <div class="card-body">
+                    <a href="/cms/blog">ブログ投稿</a>
                 </div>
             </div>
         </div>
