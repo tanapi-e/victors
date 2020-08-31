@@ -36,4 +36,32 @@ class Game extends Model
         // 現在日付より前の試合を取得し返す
         return Game::where('match_day', $comparisonOperator, $today)->orderBy('match_day', 'asc')->get();
     }
+
+    /**
+     * 試合結果一件取得処理(最新)
+     *
+     * @return Game
+     */
+    public function getResultGame()
+    {
+        // 現在日付設定
+        $today = Carbon::today();
+
+        // 直近の試合結果一件取得
+        return Game::where('match_day', '<', $today)->orderBy('match_day', 'desc')->first();
+    }
+
+    /**
+     * 試合予定一件取得処理(最新)
+     *
+     * @return Game
+     */
+    public function getNextGame()
+    {
+        // 現在日付設定
+        $today = Carbon::today();
+
+        // 直近の試合予定一件取得
+        return Game::where('match_day', '>', $today)->orderBy('match_day', 'asc')->first();
+    }
 }

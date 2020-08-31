@@ -1,3 +1,7 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* cms */
 .pdBtm10 {
     margin-bottom: 30px;
 }
@@ -19,4 +23,275 @@
     .textArea {
         width: 500px;
     }
+}
+
+/* コンテンツ */
+/* 共通 */
+#wrapper {
+    background-color: #fff;
+}
+
+.top_content {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.top_content article {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    padding: 25px;
+    color: #ea5550;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+/* header */
+header {
+    margin: 0 auto;
+    background-color: #333333;
+    color: #fff;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 99;
+}
+
+#header {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header h1 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+header nav {
+    position: absolute;
+    right: 0px;
+    top: 40%;
+}
+
+header nav > ul {
+    display: flex;
+}
+
+header nav > ul li {
+    border-right: 1px dotted #000;
+    position: relative;
+}
+
+.header,
+li {
+    list-style: none;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+/* END header */
+
+/* footer */
+footer {
+    text-align: center;
+    height: 50px;
+    padding-top: 15px;
+    color: #fff;
+    /* 消す */
+    background-color: #333;
+}
+
+/* コンテンツ */
+#wrapper {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#main_image img {
+    width: 100%;
+    height: 750px;
+    margin: 0 auto;
+}
+
+.game_zone {
+    background-color: #eeeeee !important;
+}
+
+.game {
+    padding: 10px 0 45px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.game article {
+    /*display: flex;
+    justify-content: space-between;*/
+
+}
+
+.game .game_next {
+    height: 350px;
+    padding-left: 10px;
+}
+
+.game .game_result {
+    height: 350px;
+    padding-right: 10px;
+}
+
+.game_result h2 {
+    background-color: #ea5550 !important;
+    color: #fff;
+    font-weight: bold;
+    align-items: center;
+    padding: 25px;
+}
+
+.game_next h2 {
+    background-color: #eac900 !important;
+    color: #fff;
+    font-weight: bold;
+    align-items: center;
+    padding: 25px;
+}
+
+.game article section {
+    box-sizing: border-box;
+}
+
+.game article .game_result {
+    margin-bottom: 25px;
+}
+
+.game .match .team dt {
+    font-size: 28px;
+}
+
+.game article section .match {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    /*text-align: center;*/
+    align-items: center;
+    justify-content: center;
+}
+
+.game .match .team {
+    padding: 25px;
+}
+
+.game .match .score dt {
+    font-size: 28px;
+    text-align: center;
+}
+
+.game .match .score {
+    padding-top: 25px;
+}
+
+.game .match .next_date dt {
+    font-size: 20px;
+}
+
+.game article section .btn {
+    line-height: 1;
+}
+
+.game article section .btn a {
+    display: inline-block;
+    margin: 0 5px;
+    background-color: #fff;
+    padding: 0.7em 1.8em;
+    color: #ea5550;
+    font-size: 1.2rem;
+    border: 2px solid #ea5550;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+/* Blog(TOP) */
+/*.top_content .blog_zone {
+    background-color: #ffffff !important;
+}*/
+
+.top_content .blog_list {
+    text-align: left;
+    border-top: 1px dotted #ccc;
+}
+
+.top_content .blog_list a {
+    display: block;
+    color: inherit;
+    font-size: 1.4rem;
+    border-bottom: 1px dotted #ccc;
+    transition: 0.3s;
+}
+
+.top_content .blog_list dl {
+    display: flex;
+    padding: 0.71429em 0;;
+}
+
+.top_content .blog_list dt {
+    flex-shrink: 0;
+    width: 8em;
+}
+
+.top_content .blog_text {
+    text-overflow: ellipsis;
+}
+
+.btn-form {
+    line-height: 1;
+}
+
+.btn-form a {
+    margin-bottom: 25px;
+}
+
+.btn-form a,
+.btn-form input[type="submit"],
+.btn-form button {
+    display: inline-block;
+    background-color: #fff;
+    padding: 0.5em 0.7em;
+    color: #ea5550;
+    font-size: 1.2rem;
+    border: 2px solid #ea5550;
+    border-radius: 50px;
+    transition: 0.3s;
+    line-height: 1;
+}
+
+/* insta(TOP) */
+.sns_zone {
+    background-color: #eeeeee !important;
+    color: #333;
+}
+
+.sns_zone article .sns {
+    display: flex;
+}
+
+.sns_zone article .sns .insta,.teams {
+    flex: 1;
+}
+
+.teams img {
+    margin-top: 75px;
 }
