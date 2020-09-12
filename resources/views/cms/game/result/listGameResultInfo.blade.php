@@ -44,18 +44,7 @@
         </div>
     @endif
 </div>
+
+<script src="{{ asset('js/cms.js') }}"></script>
 @endsection
 
-@section('script')
-    <script>
-        $(function() {
-            $('.btn-dell').click(function() {
-                if (confirm('本当に削除しますか？')) {
-                    alert('削除しました。');
-                } else {
-                    return false;
-                }
-            });
-        });
-    </script>
-@endsection
