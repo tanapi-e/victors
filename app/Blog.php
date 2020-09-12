@@ -32,4 +32,15 @@ class Blog extends Model
     {
         return Blog::create($postData);
     }
+
+    /**
+     * ブログ投稿最新5件取得処理
+     *
+     * @return Blog
+     */
+    public function getNewBlog()
+    {
+        // 最新5件取得
+        return Blog::orderBy('created_at', 'desc')->take(5)->get();
+    }
 }
