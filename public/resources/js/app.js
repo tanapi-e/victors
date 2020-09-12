@@ -49746,6 +49746,25 @@ var app = new Vue({
 
 /***/ }),
 
+/***/ "./resources/js/assets/cms.js":
+/*!************************************!*\
+  !*** ./resources/js/assets/cms.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $(".btn-dell").click(function () {
+    if (confirm("本当に削除しますか？")) {
+      alert("削除しました。");
+    } else {
+      return false;
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -49872,13 +49891,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!******************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/js/assets/cms.js ./resources/sass/app.scss ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Applications/MAMP/htdocs/victors/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Applications/MAMP/htdocs/victors/resources/js/assets/cms.js */"./resources/js/assets/cms.js");
 module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/victors/resources/sass/app.scss */"./resources/sass/app.scss");
 
 

@@ -8,7 +8,7 @@
 </div>
 <div id="wrapper">
     <div class="top_content game_zone">
-        <h2 class="title">
+        <h2 class="title hidden">
             <strong>GAME</strong>
         </h2>
         <div class="game">
@@ -50,7 +50,7 @@
                                 <dt>{{$nextGame->match_day}}</dt>
                             </dl>
                             <dl class="team">
-                                <dt>{{$resultGame->opponent_team}}</dt>
+                                <dt>{{$nextGame->opponent_team}}</dt>
                             </dl>
                         @endempty
                     </div>
@@ -73,13 +73,13 @@
                 @foreach($newBlogs as $newBlog)
                 <a href="#">
                     <dl>
-                        <dt>{{$newBlog->created_at}}</dt>
+                        <dt>{{$newBlog->created_at->format('Y-m-d')}}</dt>
                         <dd class="blog_text">{{$newBlog->title}}</dd>
                     </dl>
                 </a>
                 @endforeach
             </div>
-            <div class="btn-form mt20">
+            <div class="btn-form mt20 btn">
                 <a href="#">もっと見る</a>
             </div>
         </article>
@@ -101,6 +101,35 @@
                     </a>
                 </section>
             </div>
+        </article>
+    </div>
+    <div class="top_content about_zone">
+        <article>
+            <h2 class="title">
+                <strong>About</strong>
+            </h2>
+            <section class="about_message">
+                <p>
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテストテスト
+                    テストテストテストテストテストテストテストテスト
+                </p>
+            </section>
         </article>
     </div>
 </div>

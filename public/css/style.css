@@ -1,297 +1,635 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/* cms */
-.pdBtm10 {
-    margin-bottom: 30px;
-}
-.select {
-    border: 1px solid #ced4da;
-    color: #495057;
-}
+/* スマホ用 */
+@media (max-width: 768px) {
+    #wrapper {
+        background-color: #fff;
+    }
 
-.mgtp30 {
-    margin-top: 30px !important;
-}
+    .top_content {
+        margin: 0 auto;
+        text-align: center;
+        font-weight: bold;
+    }
 
-.mgbt30 {
-    margin-bottom: 30px !important;
-}
+    .top_content article {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-@media screen and (min-width: 960px) {
-    /* 960px以上に適用されるCSS（PC用） */
-    .textArea {
-        width: 500px;
+    .title {
+        padding: 25px;
+        color: #ea5550;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .btn a {
+        display: inline-block;
+        margin: 0 5px;
+        background-color: #ea5550;
+        padding: 0.7em 1.8em;
+        color: #fff;
+        font-size: 1.2rem;
+        border: 2px solid #ea5550;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    /*----------------------------*/
+    /*        header              */
+    /*----------------------------*/
+    header {
+        margin: 0 auto;
+        height: 80px;
+        background-color: #333333;
+        color: #fff;
+        position: fixed;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 99;
+    }
+
+    header h1 {
+        padding: 15px;
+    }
+
+    nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        width: 300px;
+        background: #ffffff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transition: all 0.5s;
+        z-index: 3;
+        opacity: 0;
+    }
+
+    .open nav {
+        left: 0;
+        opacity: 1;
+    }
+
+    nav .inner {
+        padding: 25px;
+    }
+
+    nav .inner ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav .inner ul li {
+        position: relative;
+        margin: 0;
+        border-bottom: 1px solid #333;
+    }
+
+    nav .inner ul li a {
+        display: block;
+        color: #333;
+        font-size: 14px;
+        padding: 1em;
+        text-decoration: none;
+        transition-duration: 0.2s;
+    }
+
+    nav .inner ul li a:hover {
+        background: #e4e4e4;
+    }
+
+    nav {
+        left: -220px;
+        width: 220px;
+    }
+
+    .toggle_btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        transition: all 0.5s;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .toggle_btn span {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 4px;
+        transition: all 0.5s;
+    }
+
+    .toggle_btn span:nth-child(1) {
+        top: 4px;
+    }
+
+    .toggle_btn span:nth-child(2) {
+        top: 14px;
+    }
+
+    .toggle_btn span:nth-child(3) {
+        bottom: 4px;
+    }
+
+    .open .toggle_btn span {
+        background-color: #fff;
+    }
+
+    .open .toggle_btn span:nth-child(1) {
+        -webkit-transform: translateY(10px) rotate(-315deg);
+        transform: translateY(10px) rotate(-315deg);
+    }
+
+    .open .toggle_btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .open .toggle_btn span:nth-child(3) {
+        -webkit-transform: translateY(-10px) rotate(315deg);
+        transform: translateY(-10px) rotate(315deg);
+    }
+
+    #mask {
+        display: none;
+        transition: all 0.5s;
+    }
+
+    .open #mask {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.8;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    #main_image img {
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    /*----------------------------*/
+    /*        footer              */
+    /*----------------------------*/
+    footer {
+        text-align: center;
+        height: 50px;
+        padding-top: 15px;
+        color: #fff;
+        /* 消す */
+        background-color: #333;
+    }
+
+    /*----------------------------*/
+    /*          コンテンツ         */
+    /*----------------------------*/
+    .game {
+        margin-bottom: 30px;
+        background-color: #eeeeee;
+        padding-bottom: 30px;
+    }
+
+    .game article section .match {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .game .match .team {
+        padding: 25px;
+        font-size: 1.7em;
+    }
+
+    .game .match .score dt {
+        font-size: 1.5em;
+        justify-content: center;
+    }
+
+    .game .match .score {
+        padding-top: 25px;
+    }
+
+    .game .match .next_date dt {
+        font-size: 1em;
+    }
+
+    .game article section .btn {
+        line-height: 1;
+        ;
+    }
+
+    .game_result h2 {
+        background-color: #ea5550 !important;
+        color: #fff;
+        font-weight: bold;
+        align-items: center;
+        padding: 25px;
+        width: 95%;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .game_next h2 {
+        background-color: #0078ba !important;
+        color: #fff;
+        font-weight: bold;
+        align-items: center;
+        padding: 25px;
+        width: 95%;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        ;
+    }
+
+    .blog_zone {
+        padding-bottom: 30px;
+    }
+
+    .blog_zone .btn {
+        margin-top: 30px;
+    }
+
+    .top_content .blog_list {
+        text-align: center;
+        border-top: 1px dotted #ccc;
+    }
+
+    .top_content .blog_list a {
+        display: block;
+        color: inherit;
+        font-size: 1.4rem;
+        border-bottom: 1px dotted #ccc;
+        transition: 0.3s;
+    }
+
+    .top_content .blog_list dl {
+        padding-top: 0.71429em;
+    }
+
+    .top_content .blog_list dt {
+        flex-shrink: 0;
+        font-size: 0.7em;
+    }
+
+    .top_content .blog_text {
+        text-overflow: ellipsis;
+        font-size: 1.2em;
+    }
+
+    /* insta(TOP) */
+    .sns_zone {
+        background-color: #eeeeee !important;
+        color: #333;
+    }
+
+    .sns_zone .insta {
+        padding-bottom: 25px;
+        margin-top: -30px;
+    }
+
+    .sns_zone .teams {
+        padding-bottom: 30px;
+    }
+
+    .about_message {
+        margin-left: 30px;
+        margin-right: 30px;
+        text-align: left;
     }
 }
 
-/* コンテンツ */
-/* 共通 */
-#wrapper {
-    background-color: #fff;
-}
+/* PC用 */
+@media (min-width: 768px) {
 
-.top_content {
-    margin: 0 auto;
-    text-align: center;
-    font-weight: bold;
-}
+    /* cms */
+    .pdBtm10 {
+        margin-bottom: 30px;
+    }
 
-.top_content article {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
+    .select {
+        border: 1px solid #ced4da;
+        color: #495057;
+    }
 
-.title {
-    padding: 25px;
-    color: #ea5550;
-}
+    .mgtp30 {
+        margin-top: 30px !important;
+    }
 
-.mt20 {
-    margin-top: 20px !important;
-}
+    .mgbt30 {
+        margin-bottom: 30px !important;
+    }
 
-.mb20 {
-    margin-bottom: 20px;
-}
+    @media screen and (min-width: 960px) {
 
-/* header */
-header {
-    margin: 0 auto;
-    background-color: #333333;
-    color: #fff;
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    width: 100%;
-    z-index: 99;
-}
+        /* 960px以上に適用されるCSS（PC用） */
+        .textArea {
+            width: 500px;
+        }
+    }
 
-#header {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-}
+    /* コンテンツ */
+    /* 共通 */
+    #wrapper {
+        background-color: #fff;
+    }
 
-header h1 {
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
+    .top_content {
+        margin: 0 auto;
+        text-align: center;
+        font-weight: bold;
+    }
 
-header nav {
-    position: absolute;
-    right: 0px;
-    top: 40%;
-}
+    .top_content article {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-header nav > ul {
-    display: flex;
-}
+    .title {
+        padding: 25px;
+        color: #ea5550;
+    }
 
-header nav > ul li {
-    border-right: 1px dotted #000;
-    position: relative;
-}
+    .mt20 {
+        margin-top: 20px !important;
+    }
 
-.header,
-li {
-    list-style: none;
-    padding-left: 13px;
-    padding-right: 13px;
-}
+    .mb20 {
+        margin-bottom: 20px;
+    }
 
-/* END header */
+    /* header */
+    header {
+        margin: 0 auto;
+        background-color: #333333;
+        color: #fff;
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 99;
+    }
 
-/* footer */
-footer {
-    text-align: center;
-    height: 50px;
-    padding-top: 15px;
-    color: #fff;
-    /* 消す */
-    background-color: #333;
-}
+    #header {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 
-/* コンテンツ */
-#wrapper {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1rem;
-}
+    header h1 {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
 
-#main_image img {
-    width: 100%;
-    height: 750px;
-    margin: 0 auto;
-}
+    header nav .inner {
+        position: absolute;
+        right: 0px;
+        top: 40%;
+    }
 
-.game_zone {
-    background-color: #eeeeee !important;
-}
+    header nav .inner>ul {
+        display: flex;
+    }
 
-.game {
-    padding: 10px 0 45px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
+    header nav .inner>ul li {
+        border-right: 1px dotted #000;
+        position: relative;
+    }
 
-.game article {
-    /*display: flex;
+    .header,
+    li {
+        list-style: none;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    /* END header */
+
+    /* footer */
+    footer {
+        text-align: center;
+        height: 50px;
+        padding-top: 15px;
+        color: #fff;
+        /* 消す */
+        background-color: #333;
+    }
+
+    /* コンテンツ */
+    #wrapper {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #main_image img {
+        width: 100%;
+        height: 750px;
+        margin: 0 auto;
+    }
+
+    .game_zone {
+        background-color: #eeeeee !important;
+    }
+
+    .game {
+        padding: 10px 0 45px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .game article {
+        /*display: flex;
     justify-content: space-between;*/
+    }
 
-}
+    .game .game_next {
+        height: 350px;
+        padding-left: 10px;
+    }
 
-.game .game_next {
-    height: 350px;
-    padding-left: 10px;
-}
+    .game .game_result {
+        height: 350px;
+        padding-right: 10px;
+    }
 
-.game .game_result {
-    height: 350px;
-    padding-right: 10px;
-}
+    .game_result h2 {
+        background-color: #ea5550 !important;
+        color: #fff;
+        font-weight: bold;
+        align-items: center;
+        padding: 25px;
+    }
 
-.game_result h2 {
-    background-color: #ea5550 !important;
-    color: #fff;
-    font-weight: bold;
-    align-items: center;
-    padding: 25px;
-}
+    .game_next h2 {
+        background-color: #0078ba !important;
+        color: #fff;
+        font-weight: bold;
+        align-items: center;
+        padding: 25px;
+    }
 
-.game_next h2 {
-    background-color: #eac900 !important;
-    color: #fff;
-    font-weight: bold;
-    align-items: center;
-    padding: 25px;
-}
+    .game article section {
+        box-sizing: border-box;
+    }
 
-.game article section {
-    box-sizing: border-box;
-}
+    .game article .game_result {
+        margin-bottom: 25px;
+    }
 
-.game article .game_result {
-    margin-bottom: 25px;
-}
+    .game .match .team dt {
+        font-size: 28px;
+    }
 
-.game .match .team dt {
-    font-size: 28px;
-}
+    .game article section .match {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        align-items: center;
+        justify-content: center;
+    }
 
-.game article section .match {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    /*text-align: center;*/
-    align-items: center;
-    justify-content: center;
-}
+    .game .match .team {
+        padding: 25px;
+    }
 
-.game .match .team {
-    padding: 25px;
-}
+    .game .match .score dt {
+        font-size: 28px;
+        text-align: center;
+    }
 
-.game .match .score dt {
-    font-size: 28px;
-    text-align: center;
-}
+    .game .match .score {
+        padding-top: 25px;
+    }
 
-.game .match .score {
-    padding-top: 25px;
-}
+    .game .match .next_date dt {
+        font-size: 20px;
+    }
 
-.game .match .next_date dt {
-    font-size: 20px;
-}
+    .game article section .btn {
+        line-height: 1;
+    }
 
-.game article section .btn {
-    line-height: 1;
-}
+    .game article section .btn a {
+        display: inline-block;
+        margin: 0 5px;
+        background-color: #fff;
+        padding: 0.7em 1.8em;
+        color: #ea5550;
+        font-size: 1.2rem;
+        border: 2px solid #ea5550;
+        border-radius: 50px;
+        transition: 0.3s;
+    }
 
-.game article section .btn a {
-    display: inline-block;
-    margin: 0 5px;
-    background-color: #fff;
-    padding: 0.7em 1.8em;
-    color: #ea5550;
-    font-size: 1.2rem;
-    border: 2px solid #ea5550;
-    border-radius: 50px;
-    transition: 0.3s;
-}
-
-/* Blog(TOP) */
-/*.top_content .blog_zone {
+    /* Blog(TOP) */
+    /*.top_content .blog_zone {
     background-color: #ffffff !important;
 }*/
 
-.top_content .blog_list {
-    text-align: left;
-    border-top: 1px dotted #ccc;
-}
+    .top_content .blog_list {
+        text-align: left;
+        border-top: 1px dotted #ccc;
+    }
 
-.top_content .blog_list a {
-    display: block;
-    color: inherit;
-    font-size: 1.4rem;
-    border-bottom: 1px dotted #ccc;
-    transition: 0.3s;
-}
+    .top_content .blog_list a {
+        display: block;
+        color: inherit;
+        font-size: 1.4rem;
+        border-bottom: 1px dotted #ccc;
+        transition: 0.3s;
+    }
 
-.top_content .blog_list dl {
-    display: flex;
-    padding: 0.71429em 0;;
-}
+    .top_content .blog_list dl {
+        display: flex;
+        padding: 0.71429em 0;
+    }
 
-.top_content .blog_list dt {
-    flex-shrink: 0;
-    width: 8em;
-}
+    .top_content .blog_list dt {
+        flex-shrink: 0;
+        width: 8em;
+    }
 
-.top_content .blog_text {
-    text-overflow: ellipsis;
-}
+    .top_content .blog_text {
+        text-overflow: ellipsis;
+    }
 
-.btn-form {
-    line-height: 1;
-}
+    .btn-form {
+        line-height: 1;
+    }
 
-.btn-form a {
-    margin-bottom: 25px;
-}
+    .btn-form a {
+        margin-bottom: 25px;
+    }
 
-.btn-form a,
-.btn-form input[type="submit"],
-.btn-form button {
-    display: inline-block;
-    background-color: #fff;
-    padding: 0.5em 0.7em;
-    color: #ea5550;
-    font-size: 1.2rem;
-    border: 2px solid #ea5550;
-    border-radius: 50px;
-    transition: 0.3s;
-    line-height: 1;
-}
+    .btn-form a,
+    .btn-form input[type="submit"],
+    .btn-form button {
+        display: inline-block;
+        background-color: #fff;
+        padding: 0.5em 0.7em;
+        color: #ea5550;
+        font-size: 1.2rem;
+        border: 2px solid #ea5550;
+        border-radius: 50px;
+        transition: 0.3s;
+        line-height: 1;
+    }
 
-/* insta(TOP) */
-.sns_zone {
-    background-color: #eeeeee !important;
-    color: #333;
-}
+    /* insta(TOP) */
+    .sns_zone {
+        background-color: #eeeeee !important;
+        color: #333;
+    }
 
-.sns_zone article .sns {
-    display: flex;
-}
+    .sns_zone article .sns {
+        display: flex;
+    }
 
-.sns_zone article .sns .insta,.teams {
-    flex: 1;
-}
+    .sns_zone article .sns .insta,
+    .teams {
+        flex: 1;
+    }
 
-.teams img {
-    margin-top: 75px;
+    .teams img {
+        margin-top: 75px;
+    }
+
+    .about_message {
+        text-align: left;
+    }
 }
