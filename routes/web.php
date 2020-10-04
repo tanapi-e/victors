@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// TOPページ
 Route::get('/', 'TopController@index');
+// 選手情報ページ
+Route::get('/player', 'PlayerController@index');
 
 Auth::routes();
 

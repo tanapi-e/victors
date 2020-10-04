@@ -21,6 +21,7 @@ class Players extends Model
     {
         return Players::create($postData);
     }
+
     /**
      * 選手情報一覧取得処理
      *
