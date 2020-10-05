@@ -632,4 +632,34 @@
     .about_message {
         text-align: left;
     }
+
+    /* playerページ */
+    .playerInfo {
+        display: flex;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 10px;
+    }
+
+    .uniNumner {
+        display: block;
+        width: 10%;
+        height: 10%;
+        color: #fff;
+        line-height: 2.1;
+        font-size: 2rem;
+        background: #ea5550;
+    }
+
+    .playerList .profile {
+        width: 100%;
+        padding-left: 1rem;;
+        text-align: left;
+        margin: auto;
+    }
+
+    .playerList .profile strong {
+        font-size: 2rem;
+        font-weight: bold;
+    }
 }
