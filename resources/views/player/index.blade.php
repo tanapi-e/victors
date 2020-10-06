@@ -5,7 +5,6 @@
     <h2 class="title">所属選手</h2>
     <div class="playerPageArea">
         <ul class="playerUl">
-            <!-- 仮作成 -->
             @foreach ($playerList as $player)
             <li class="playerList">
                 <div class="playerInfo">
