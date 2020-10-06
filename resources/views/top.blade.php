@@ -80,7 +80,7 @@
                 @endforeach
             </div>
             <div class="btn-form mt20 btn">
-                <a href="#">もっと見る</a>
+                <a href="/blog">もっと見る</a>
             </div>
         </article>
     </div>

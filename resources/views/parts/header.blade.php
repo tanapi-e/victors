@@ -7,7 +7,7 @@
                 <div class="inner">
                     <ul>
                         <li class="header">
-                            <a href="/"">Top</a>
+                            <a href="/">Top</a>
                         </li>
                         <li class="header">
                             <a href="/player">Player</a>

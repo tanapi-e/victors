@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TopController@index');
 // 選手情報ページ
 Route::get('/player', 'PlayerController@index');
+// Blogページ
+Route::get('/blog', 'blogController@index');
+
 
 Auth::routes();
 
