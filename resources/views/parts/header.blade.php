@@ -7,16 +7,16 @@
                 <div class="inner">
                     <ul>
                         <li class="header">
-                            <a href="#">Top</a>
+                            <a href="/"">Top</a>
                         </li>
                         <li class="header">
-                            <a href="">Player</a>
+                            <a href="/player">Player</a>
                         </li>
                         <li class="header">
-                            <a href="#">Game</a>
+                            <a href="/game">Game</a>
                         </li>
                         <li class="header">
-                            <a href="#">Blog</a>
+                            <a href="/blog">Blog</a>
                         </li>
                     </ul>
                 </div>
