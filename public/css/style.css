@@ -363,6 +363,7 @@
     /* 共通 */
     #wrapper {
         background-color: #fff;
+        margin-top: 100px;
     }
 
     .top_content {
@@ -380,6 +381,10 @@
     .title {
         padding: 25px;
         color: #ea5550;
+    }
+
+    .pageTitle {
+        padding-top: 100px;
     }
 
     .mt20 {
@@ -555,11 +560,6 @@
         border-radius: 50px;
         transition: 0.3s;
     }
-
-    /* Blog(TOP) */
-    /*.top_content .blog_zone {
-    background-color: #ffffff !important;
-}*/
 
     .top_content .blog_list {
         text-align: left;
