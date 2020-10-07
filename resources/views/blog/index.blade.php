@@ -19,33 +19,5 @@
             </div>
         </article>
     </div>
-    <!--<section class="blogSection">
-        <div class="blog_list">
-            @foreach($blogList as $blog)
-            <a href="#">
-                <dl>
-                    <dt>{{$blog->created_at->format('Y-m-d')}}</dt>
-                    <dd class="blog_text">{{$blog->title}}</dd>
-                </dl>
-            </a>
-            @endforeach
-        </div>
-        <ul>
-            @foreach ($blogList as $blog)
-            <li>
-                <a href="">
-                    <div class="blogList">
-                        <dl class="date">
-                            <dt>{{ $blog->created_at->format('Y/m/d') }}</dt>
-                        </dl>
-                        <dl class="blogTitle">
-                            <dd>{{ $blog->title }}</dd>
-                        </dl>
-                    </div>
-                </a>
-            </li>
-            @endforeach
-        </ul>-->
-    </section>
 </div>
 @endsection
