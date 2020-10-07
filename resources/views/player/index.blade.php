@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="wrapper">
-    <h2 class="title">所属選手</h2>
+    <h2 class="title pageTitle">所属選手</h2>
     <div class="playerPageArea">
         <ul class="playerUl">
             @foreach ($playerList as $player)
