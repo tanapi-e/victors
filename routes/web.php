@@ -18,8 +18,9 @@ Route::get('/', 'TopController@index');
 // 選手情報ページ
 Route::get('/player', 'PlayerController@index');
 // Blogページ
-Route::get('/blog', 'blogController@index');
-
+Route::get('/blog', 'BlogController@index');
+// Blog詳細ページ
+Route::get('/blog/detail/{id}', 'BlogController@detail');
 
 Auth::routes();
 

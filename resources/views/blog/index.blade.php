@@ -9,7 +9,7 @@
             </h2>
             <div class="blog_list">
                 @foreach($blogList as $blog)
-                <a href="#">
+                <a href="/blog/detail/{{ $blog->id }}">
                     <dl>
                         <dt class="blogDate">{{$blog->created_at->format('Y-m-d')}}</dt>
                         <dd class="blog_text">{{$blog->title}}</dd>
