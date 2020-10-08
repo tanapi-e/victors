@@ -43,4 +43,14 @@ class Blog extends Model
         // 最新5件取得
         return Blog::orderBy('created_at', 'desc')->take(5)->get();
     }
+
+    /**
+     * ブログ1件取得処理
+     *
+     * @return Blog
+     */
+    public function detailBlog($id)
+    {
+        return Game::find($id);
+    }
 }
