@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="main_image">
-    <a href="#">
+    <a href="/">
         <img src="../storage/images/IMG_9150.jpg" alt="main_image">
     </a>
 </div>
@@ -72,7 +72,7 @@
             </h2>
             <div class="blog_list">
                 @foreach($newBlogs as $newBlog)
-                <a href="#">
+                <a href="/blog/detail/{{ $newBlog->id }}">
                     <dl>
                         <dt>{{$newBlog->created_at->format('Y-m-d')}}</dt>
                         <dd class="blog_text">{{$newBlog->title}}</dd>
