@@ -7,6 +7,7 @@
     </a>
 </div>
 <div id="wrapper">
+    <div class="inner">
     <div class="top_content game_zone">
         <h2 class="title hidden">
             <strong>GAME</strong>
@@ -131,6 +132,7 @@
                 </p>
             </section>
         </article>
+    </div>
     </div>
 </div>
 @endsection

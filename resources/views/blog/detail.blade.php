@@ -2,9 +2,25 @@
 
 @section('content')
 <div id="wrapper">
-    {{$id}}
-    {{$title}}
-    {{$content}}
-    {{$date}}
+    <article>
+        <h2 class="title pageTitle">
+            <strong>BLOG</strong>
+        </h2>
+        <div class="blogDetailArea">
+            <h3 class="detailTitle">{{ $title }}</h3>
+            <p class="timeArea">
+                <time style="float: right;">{{ $date }}</time>
+            </p><br>
+            <div class="blogDetailContent">
+                <p>{{ $content }}</p>
+            </div>
+
+
+
+        </div>
+
+    </article>
+
+
 </div>
 @endsection

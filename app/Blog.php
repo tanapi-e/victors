@@ -51,6 +51,6 @@ class Blog extends Model
      */
     public function detailBlog($id)
     {
-        return Game::find($id);
+        return Blog::find($id);
     }
 }
