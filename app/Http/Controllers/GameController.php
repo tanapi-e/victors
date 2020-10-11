@@ -20,4 +20,9 @@ class GameController extends Controller
             'nextGame' => $nextGame
         ]);
     }
+
+    public function result()
+    {
+
+    }
 }

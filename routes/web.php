@@ -23,6 +23,8 @@ Route::get('/blog', 'BlogController@index');
 Route::get('/blog/detail/{id}', 'BlogController@detail');
 // 試合ページ
 Route::get('/game', 'GameController@index');
+// 試合結果ページ
+Route::get('/game/result', 'GameController@result');
 
 Auth::routes();
 
