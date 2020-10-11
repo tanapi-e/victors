@@ -10,17 +10,12 @@
             <h3 class="detailTitle">{{ $title }}</h3>
             <p class="timeArea">
                 <time style="float: right;">{{ $date }}</time>
-            </p><br>
+            </p>
+            <br />
             <div class="blogDetailContent">
                 <p>{{ $content }}</p>
             </div>
-
-
-
         </div>
-
     </article>
-
-
 </div>
 @endsection
