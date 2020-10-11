@@ -21,6 +21,8 @@ Route::get('/player', 'PlayerController@index');
 Route::get('/blog', 'BlogController@index');
 // Blog詳細ページ
 Route::get('/blog/detail/{id}', 'BlogController@detail');
+// 試合ページ
+Route::get('/game', 'GameController@index');
 
 Auth::routes();
 
