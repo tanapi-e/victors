@@ -21,8 +21,11 @@ class GameController extends Controller
         ]);
     }
 
-    public function result()
+    public function result(Game $game)
     {
+        // 試合予定一覧取得
+        $resultGames = $game->getGameList('<');
 
+        return view('game.result')->with('resultGames', $resultGames);
     }
 }
