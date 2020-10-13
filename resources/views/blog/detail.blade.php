@@ -6,7 +6,7 @@
         <h2 class="title pageTitle">
             <strong>BLOG</strong>
         </h2>
-        <div class="blogDetailArea">
+        <div class="inner">
             <h3 class="detailTitle">{{ $title }}</h3>
             <p class="timeArea">
                 <time style="float: right;">{{ $date }}</time>
