@@ -3,16 +3,26 @@
 @section('content')
 <div id="wrapper">
     <h2 class="title pageTitle">
-        <strong>試合結果</strong>
+        <strong>GAME</strong>
     </h2>
-    @foreach($resultGames as $resultGame)
-    <dl class="score">
-        <dt>{{$resultGame->get_point}} - {{$resultGame->lost_point}}</dt>
-        <dd>{{$resultGame->match_day}}</dd>
-    </dl>
-    <dl class="team">
-        <dt>{{$resultGame->opponent_team}}</dt>
-    </dl>
-    @endforeach
+    <div class="inner">
+        <h3 class="detailTitle">試合結果</h3>
+        <ul class="matchList">
+            @foreach($resultGames as $resultGame)
+            <li>
+                <div class="team">
+                    <p class="teamName">Victors</p>
+                </div>
+                <div class="gameInfo">
+                    <strong>{{$resultGame->get_point}} - {{$resultGame->lost_point}}</strong>
+                    <p>{{$resultGame->match_day}}</p>
+                </div>
+                <div class="team">
+                    <p class="teamName">{{$resultGame->opponent_team}}</p>
+                </div>
+            </li>
+            @endforeach
+        </ul>
+    </div>
 </div>
 @endsection

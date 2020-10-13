@@ -387,6 +387,11 @@
         padding-top: 100px;
     }
 
+    .inner {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
     .mt20 {
         margin-top: 20px !important;
     }
@@ -664,11 +669,6 @@
     }
 
     /* ブログ詳細ページ */
-    .blogDetailArea {
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
     .detailTitle {
         background-color: #444444;
         margin-bottom: 1.0em;
@@ -683,5 +683,36 @@
         word-wrap: break-word;
         padding-top: 20px;
         text-align: left;
+    }
+
+    /* 試合結果ページ */
+    .matchList li {
+        display: flex;
+        align-items: center;
+        padding: 30px 0;
+        color: #333;
+        transition: 0.3s;;
+    }
+
+    .matchList .team {
+        align-items: center;
+        width: 35%;
+    }
+
+    .matchList .teamName {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .matchList .gameInfo {
+        width: 30%;
+    }
+
+    .matchList .gameInfo strong {
+        font-size: 1.8em;
+    }
+
+    .matchList li + li {
+        border-top: 1px solid #f2f2f2;
     }
 }
