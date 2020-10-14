@@ -31,7 +31,7 @@
                         </dl>
                     </div>
                     <div class="btn">
-                        <a href="#">以前の結果</a>
+                        <a href="/game/result">以前の結果</a>
                     </div>
                 </section>
                 <section class="game_next">
@@ -58,7 +58,7 @@
                     @empty($nextGame)
                     @else
                     <div class="btn">
-                        <a href="#">今後の予定</a>
+                        <a href="/game/schedule">今後の予定</a>
                     </div>
                     @endempty
                 </section>
