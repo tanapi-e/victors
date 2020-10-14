@@ -47,7 +47,7 @@
                 @empty($nextGame)
                 @else
                 <div class="btn">
-                    <a href="#">今後の予定</a>
+                    <a href="/game/schedule">今後の予定</a>
                 </div>
                 @endempty
             </section>

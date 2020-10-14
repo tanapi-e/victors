@@ -25,6 +25,8 @@ Route::get('/blog/detail/{id}', 'BlogController@detail');
 Route::get('/game', 'GameController@index');
 // 試合結果ページ
 Route::get('/game/result', 'GameController@result');
+// 試合予定ページ
+Route::get('/game/schedule', 'GameController@schedule');
 
 Auth::routes();
 

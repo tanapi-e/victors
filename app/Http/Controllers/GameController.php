@@ -28,4 +28,12 @@ class GameController extends Controller
 
         return view('game.result')->with('resultGames', $resultGames);
     }
+
+    public function schedule(Game $game)
+    {
+        // 試合予定一覧取得
+        $newGames = $game->getGameList('>');
+
+        return view('game.schedule')->with('newGames', $newGames);
+    }
 }
