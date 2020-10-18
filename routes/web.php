@@ -30,13 +30,12 @@ Route::get('/game/schedule', 'GameController@schedule');
 
 Auth::routes();
 
-Route::get('/cms', 'cms\TopController@index')->middleware('auth');
-Route::get('/cms/player', 'cms\PlayerInfoController@index')->middleware('auth');
-Route::get('/cms/game/schedule', 'cms\GameScheduleInfoController@index')->middleware('auth');
-Route::get('/cms/game/result', 'cms\GameResultInfoController@index')->middleware('auth');
-Route::get('/cms/blog', 'cms\BlogController@index')->middleware('auth');
+Route::group(['middleware' => ['auth']], function () {
+    // 管理画面TOP
+    Route::get('/cms', 'cms\TopController@index');
 
-Route::group(['middleware' => ['web']], function () {
+    // 選手情報登録画面表示(管理画面)
+    Route::get('/cms/player', 'cms\PlayerInfoController@index');
     // 選手情報登録(管理画面)
     Route::post('/cms/player/confirm', 'cms\PlayerInfoController@create');
     // 選手情報一覧表示(管理画面)
@@ -44,6 +43,8 @@ Route::group(['middleware' => ['web']], function () {
     // 選手情報削除(管理画面)
     Route::post('/cms/player/delete/{id}', 'cms\PlayerInfoController@delete');
 
+    // 試合予定登録画面表示(管理画面)
+    Route::get('/cms/game/schedule', 'cms\GameScheduleInfoController@index');
     // 試合予定登録(管理画面)
     Route::post('/cms/game/schedule/confirm', 'cms\GameScheduleInfoController@create');
     // 試合予定一覧取得(管理画面)
@@ -51,6 +52,8 @@ Route::group(['middleware' => ['web']], function () {
     // 試合予定削除(管理画面)
     Route::post('/cms/game/schedule/delete/{id}', 'cms\GameScheduleInfoController@delete');
 
+    // 試合結果登録画面表示(管理画面)
+    Route::get('/cms/game/result', 'cms\GameResultInfoController@index');
     // 試合結果登録(管理画面)
     Route::post('/cms/game/result/confirm', 'cms\GameResultInfoController@update');
     // 試合結果登録画面表示(管理画面)
@@ -58,6 +61,8 @@ Route::group(['middleware' => ['web']], function () {
     // 試合結果削除(管理画面)
     Route::post('/cms/game/result/delete/{id}', 'cms\GameResultInfoController@delete');
 
+    // ブログ投稿画面一覧表示(管理画面)
+    Route::get('/cms/blog', 'cms\BlogController@index');
     // ブログ投稿画面表示(管理画面)
     Route::get('/cms/blog/create', 'cms\BlogController@create_index');
     // ブログ投稿(管理画面)
