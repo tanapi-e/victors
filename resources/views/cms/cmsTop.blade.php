@@ -7,25 +7,25 @@
             <div class="card pdBtm10">
                 <div class="card-header">Game</div>
                 <div class="card-body">
-                    <a href="/cms/game/result">試合結果登録</a>
+                    <a href="/cms/game/result/list">試合結果</a>
                 </div>
             </div>
             <div class="card pdBtm10">
                 <div class="card-header">Game</div>
                 <div class="card-body">
-                    <a href="/cms/game/schedule">試合予定登録</a>
+                    <a href="/cms/game/schedule/list">試合予定</a>
                 </div>
             </div>
             <div class="card pdBtm10">
                 <div class="card-header">Player</div>
                 <div class="card-body">
-                    <a href="/cms/player">選手情報登録</a>
+                    <a href="/cms/player/list">選手情報</a>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header">Blog</div>
                 <div class="card-body">
-                    <a href="/cms/blog">ブログ投稿</a>
+                    <a href="/cms/blog">ブログ</a>
                 </div>
             </div>
         </div>

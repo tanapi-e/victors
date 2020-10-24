@@ -53,7 +53,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/cms/game/schedule/delete/{id}', 'cms\GameScheduleInfoController@delete');
 
     // 試合結果登録画面表示(管理画面)
-    Route::get('/cms/game/result', 'cms\GameResultInfoController@index');
+    Route::get('/cms/game/result/list', 'cms\GameResultInfoController@index');
     // 試合結果登録(管理画面)
     Route::post('/cms/game/result/confirm', 'cms\GameResultInfoController@update');
     // 試合結果登録画面表示(管理画面)
@@ -62,9 +62,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/cms/game/result/delete/{id}', 'cms\GameResultInfoController@delete');
 
     // ブログ投稿画面一覧表示(管理画面)
-    Route::get('/cms/blog', 'cms\BlogController@index');
+    Route::get('/cms/blog/list', 'cms\BlogController@index');
     // ブログ投稿画面表示(管理画面)
-    Route::get('/cms/blog/create', 'cms\BlogController@create_index');
+    Route::get('/cms/blog', 'cms\BlogController@create_index');
     // ブログ投稿(管理画面)
     Route::post('/cms/blog/confirm', 'cms\BlogController@create');
     // ブログ投稿内容削除(管理画面)

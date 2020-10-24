@@ -17,7 +17,6 @@
                     <p class="teamName">Victors</p>
                 </div>
                 <div class="gameInfo">
-                    <!--<strong>{{$newGame->get_point}} - {{$newGame->lost_point}}</strong>-->
                     <p>{{$newGame->match_day}}</p>
                 </div>
                 <div class="team">
