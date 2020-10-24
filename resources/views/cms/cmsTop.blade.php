@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="card-header">Blog</div>
                 <div class="card-body">
-                    <a href="/cms/blog">ブログ</a>
+                    <a href="/cms/blog/list">ブログ</a>
                 </div>
             </div>
         </div>
